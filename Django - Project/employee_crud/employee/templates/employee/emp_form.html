@@ -1,4 +1,25 @@
 {% extends "employee/base.html" %}
 {% block content %}
-    <h2>Employee Registration Form</h2>
+    <div class="container mt-5">
+        <h2 class="{% if update %}text-warning{% else %}text-success{% endif %} mb-4">
+            {% if update %}
+                Update Employee Information
+            {% else %}
+                Employee Registration Form
+            {% endif %}
+        </h2>
+        <form method="post" class="border p-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+            <button class="btn {% if update %}btn-warning{% else %}btn-success{% endif %}">
+                {% if update %}
+                    Update
+                {% else %}
+                    Register
+                {% endif %}
+            </button>
+        </form>
+    </div>
 {% endblock %}

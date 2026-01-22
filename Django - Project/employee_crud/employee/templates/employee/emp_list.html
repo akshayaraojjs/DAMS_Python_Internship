@@ -8,22 +8,21 @@
         <th>Email ID</th>
         <th>Role</th>
         <th>Department</th>
+        <th>Actions</th>
     </tr>
+    {% for employee in employees %}
     <tr>
-        <td>1</td>
-        <td>PM-001</td>
-        <td>Akshay Rao</td>
-        <td>akshay@gmail.com</td>
-        <td>Web Developer</td>
-        <td>Development</td>
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.emp_id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email_id }}</td>
+        <td>{{ employee.role }}</td>
+        <td>{{ employee.dept}}</td>
+        <td>
+            <a href="{% url 'emp-update' employee.pk %}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="{% url 'emp-delete' employee.pk %}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>PM-002</td>
-        <td>Ajay Rao</td>
-        <td>ajay@gmail.com</td>
-        <td>QA Engineer</td>
-        <td>QA</td>
-    </tr>
+    {% endfor %}
 </table>
 {% endblock %}

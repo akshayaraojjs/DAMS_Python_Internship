@@ -61,3 +61,7 @@ http: Hypertext Transfer Protocol
 8000 - Default Port Number for Django 
 
 If No route specified, it is called as Base Route or Base URL
+
+python manage.py makemigrations
+
+python manage.py migrate
