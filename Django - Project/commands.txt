@@ -1,0 +1,63 @@
+For installing the virtual environment package
+pip install virtualenv
+
+New Environment Created
+virtualenv djangoEnv
+or
+python -m virtualenv djangoEnv
+
+Activate the environment
+djangoEnv\Scripts\activate
+
+Dependency Installation
+pip install django==4.2
+
+To connect with Django & MySQL we need this
+pip install mysqlclient
+
+Creating a new django project
+django-admin startproject employee_crud
+
+go to the project path
+cd employee_crud
+
+Run the project
+python manage.py runserver
+
+To maintain the dependencies, we will use the settings.py and also we can configure DB & Mailer Setup
+settings.py
+
+For Navigation purpose, we will use urls.py
+urls.py
+
+To maintainall the project and for running the project, we will use manage.py
+
+Local DB or SQLite DB
+db.sqlite3
+
+Ctrl + C for stopping the server
+
+employee_crud is a parent module
+employee is a child/sub module
+
+Sub Module or Child Module
+python manage.py startapp employee
+
+views.py: Logic part or Backend Part
+
+Create 2 new files in Child Module: urls.py & forms.py
+
+urls.py : Navigation Purpose
+forms.py : For specifying the form fields
+models.py : For DB schema
+
+DDecoding the URL:
+http://127.0.0.1:8000/
+
+http: Hypertext Transfer Protocol
+
+127.0.0.1 - Localhost / Local Machine
+
+8000 - Default Port Number for Django 
+
+If No route specified, it is called as Base Route or Base URL
