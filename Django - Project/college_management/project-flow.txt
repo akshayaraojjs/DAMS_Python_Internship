@@ -1,0 +1,11 @@
+College Management System:
+We have 3 modules:
+1) Students Module
+2) College Module
+3) Enrollment Module
+
+Web Development works on 2 things:
+Request - Client will request
+Response - Server will respond
+
+To avoid invalid or malicious request, csrf token will be sent with a client request
